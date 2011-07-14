@@ -4,4 +4,4 @@ require 'rubygems'
 require 'mechanize'
 
 a = Mechanize.new.get 'http://comic.naver.com/webtoon/list.nhn?titleId=15568&weekday=thu'
-if a.search('//td[@class="title"]/a')[0].inner_html =~ /\(\d+\)/ {puts "Time for sleep!"} else {puts "Webtoon Time!"} end
+if a.search('//td[@class="title"]/a')[0].inner_html =~ /\(\d+\)/ then puts "Time for sleep!" else puts "Webtoon Time!" end
